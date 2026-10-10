@@ -1,0 +1,132 @@
+:root {
+  color-scheme: light;
+  --page-background: #f2f5f8;
+  --surface-background: #ffffff;
+  --text-color: #202a35;
+  --muted-color: #596775;
+  --border-color: #cbd5df;
+  --button-background: #180fc8;
+  --button-hover: #10566e;
+  --button-text: #ffffff;
+  --warning-color: #a85b00;
+  --over-color: #c62828;
+}
+
+body.dark {
+  color-scheme: dark;
+  --page-background: #151a21;
+  --surface-background: #222a34;
+  --text-color: #edf2f7;
+  --muted-color: #b7c2ce;
+  --border-color: #536170;
+  --button-background: #47a6c5;
+  --button-hover: #62bad6;
+  --button-text: #101820;
+  --warning-color: #ffbd59;
+  --over-color: #ff7373;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--page-background);
+  color: var(--text-color);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.note-card {
+  width: min(100%, 640px);
+  padding: 32px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--surface-background);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
+}
+
+h1 {
+  margin: 0 0 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--surface-background);
+  color: var(--text-color);
+  font: inherit;
+  resize: vertical;
+}
+
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--button-background);
+  outline-offset: 2px;
+}
+
+.counts {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted-color);
+}
+
+.counts p {
+  margin: 10px 0 0;
+}
+
+.warning {
+  color: var(--warning-color);
+}
+
+.over {
+  color: var(--over-color);
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--button-background);
+  color: var(--button-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .note-card {
+    padding: 24px 18px;
+  }
+}
