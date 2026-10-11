@@ -19,11 +19,11 @@ CREATE TABLE enrollments (
     FOREIGN KEY (student_id) REFERENCES students (student_id),
     FOREIGN KEY (course_id) REFERENCES courses (course_id)
 );
-CREATE INDEX idx_enrollments_course_id ON enrolments (course_id);
+CREATE INDEX idx_enrollments_course_id ON enrollments (course_id);
 INSERT INTO students (student_id, name, email)
 VALUES (1, 'Amina Yusuf', 'amina@example.edu'),
     (2, 'Brian Otieno', 'brian@example.edu'),
-    (3, 'Charlyne Wanjiru', 'chao@example.edu'),
+    (3, 'Charlyne Wanjiru', 'wanjiruo@example.edu'),
     (4, 'Diana Njeri', 'diana@example.edu');
 INSERT INTO courses (course_id, course_name)
 VALUES (101, 'Database Systems'),
@@ -60,14 +60,14 @@ FROM courses AS c
 GROUP BY c.course_id,
     c.course_name
 ORDER BY c.course_name;
--- Students who have no enrolments.
+-- Students who have no enrollments.
 SELECT s.name,
     s.email
 FROM students AS s
     LEFT JOIN enrollments AS e ON e.student_id = s.student_id
 WHERE e.student_id IS NULL
 ORDER BY s.name;
--- Update Amina Yusuf's grade in Database Systems.
+-- Update Amina  grade in Database Systems.
 UPDATE enrollments
 SET grade = 95
 WHERE student_id = 1
