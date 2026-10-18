@@ -34,3 +34,16 @@ CREATE TABLE Orders (
     FOREIGN KEY (user_id) REFERENCES Users(id),
     FOREIGN KEY (event_id) REFERENCES Events(id)
 );
+
+INSERT INTO Users (id, name, email, password_hash)
+VALUES (1, 'Demo Booker', 'demo@example.test', 'mock-auth-only');
+
+INSERT INTO Events (id, name, date, venue_name)
+VALUES (1, 'TicketHub Demo Event', '2027-01-01 19:00:00', 'Main Hall');
+
+INSERT INTO Seats (event_id, row_label, seat_number)
+VALUES
+    (1, 'A', 1), (1, 'A', 2), (1, 'A', 3), (1, 'A', 4),
+    (1, 'A', 5), (1, 'A', 6), (1, 'A', 7), (1, 'A', 8),
+    (1, 'B', 1), (1, 'B', 2), (1, 'B', 3), (1, 'B', 4),
+    (1, 'B', 5), (1, 'B', 6), (1, 'B', 7), (1, 'B', 8);
