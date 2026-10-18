@@ -12,16 +12,16 @@ Daily active users (DAU):
 
 `10,000,000 registered users × 10% active = 1,000,000 DAU`
 
-| Measure | Calculation | Estimate |
-| --- | --- | ---: |
-| Uploads per day | 1,000,000 DAU × 1 photo | 1,000,000 |
-| Average uploads per second | 1,000,000 ÷ 86,400 seconds | 11.6 |
-| Feed views per day | 1,000,000 DAU × 50 pages | 50,000,000 |
-| Average feed views per second | 50,000,000 ÷ 86,400 seconds | 579 |
-| Peak feed views per second | 579 × 5 | 2,895 |
-| Original photo storage per year | 1,000,000 × 365 × 2 MB | 730 TB |
-| Thumbnail storage per year | 1,000,000 × 365 × 0.05 MB | 18.25 TB |
-| Total new photo storage per year | 730 TB + 18.25 TB | 748.25 TB |
+| Measure                          | Calculation                 |   Estimate |
+| -------------------------------- | --------------------------- | ---------: |
+| Uploads per day                  | 1,000,000 DAU × 1 photo     |  1,000,000 |
+| Average uploads per second       | 1,000,000 ÷ 86,400 seconds  |       11.6 |
+| Feed views per day               | 1,000,000 DAU × 50 pages    | 50,000,000 |
+| Average feed views per second    | 50,000,000 ÷ 86,400 seconds |        579 |
+| Peak feed views per second       | 579 × 5                     |      2,895 |
+| Original photo storage per year  | 1,000,000 × 365 × 2 MB      |     730 TB |
+| Thumbnail storage per year       | 1,000,000 × 365 × 0.05 MB   |   18.25 TB |
+| Total new photo storage per year | 730 TB + 18.25 TB           |  748.25 TB |
 
 The estimates describe new storage for one year's uploads, without replication, backups, or overhead. Since retained photos accumulate, total storage grows by roughly 748.25 TB per year under these assumptions.
 
